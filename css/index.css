@@ -1,0 +1,396 @@
+/*------------------------------------*\
+RESET
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0b1 | 201101 
+NOTE:WORK IN PROGRESS
+USE WITH CAUTION AND TEST WITH ABANDON */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: ’’;
+  content: none;
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.middle-page-buttons {
+  border: 1px solid #222222;
+  width: 40%;
+  padding: 10px;
+  text-align: center;
+}
+.general-text {
+  font-size: 16px;
+  line-height: 24px;
+}
+.sub-headers {
+  font-weight: bold;
+  font-size: 28px;
+  color: #222222;
+}
+.page {
+  font-family: "Roboto", Arial, Sans-serif;
+}
+.page header {
+  background-color: #9ea8b1;
+  padding: 10px 6%;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+.page header nav .home-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.page header nav .home-nav .logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 10%;
+  text-decoration: none;
+}
+.page header nav .home-nav .closed-hamburger {
+  height: 25px;
+  margin-top: 5px;
+  display: none;
+}
+.page header nav .home-nav .open-hamburger {
+  height: 25px;
+  margin-top: 5px;
+}
+.page header nav .menu-content {
+  background-color: #9ea8b1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6%;
+}
+.page header nav .menu-content a {
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 85px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.page header nav .menu-content a:hover {
+  color: #222222;
+}
+.page header nav .menu-hidden {
+  display: none;
+}
+.home-page-jumbotron {
+  background: url("../img/home/home-jumbotron.png");
+  height: 65vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+@media (max-width:576px) {
+  .home-page-jumbotron {
+    background: url("../img/home/home-mobile-jumbotron.png");
+  }
+}
+.home-page-jumbotron h1 {
+  color: #ffffff;
+  padding: 0 0 3% 7%;
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: "Roboto", Arial, Sans-serif;
+}
+.container .section-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@media (max-width:576px) {
+  .container .section-1 {
+    flex-direction: column-reverse;
+  }
+}
+.container .section-1 .content {
+  justify-content: center;
+  padding: 2%;
+}
+@media (max-width:576px) {
+  .container .section-1 .content {
+    padding: 0;
+    text-align: start;
+  }
+}
+.container .section-1 .content .button {
+  border: 1px solid black;
+  text-align: center;
+  padding: 2%;
+  width: 30%;
+}
+@media (max-width:576px) {
+  .container .section-1 .content .button {
+    padding: 2%;
+    width: 100%;
+    text-align: center;
+  }
+}
+.container .section-1 .image-1 {
+  padding: 2% 2%;
+}
+@media (max-width:576px) {
+  .container .section-1 .image-1 {
+    padding: 0;
+  }
+}
+@media (max-width:576px) {
+  .container .section-1 .image-1 img {
+    width: 95vw;
+    margin: 8% auto;
+  }
+}
+.container .section-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@media (max-width:576px) {
+  .container .section-2 {
+    flex-direction: column;
+  }
+}
+.container .section-2 .image-2 {
+  padding: 2% 2%;
+}
+@media (max-width:576px) {
+  .container .section-2 .image-2 {
+    padding: 0;
+  }
+}
+@media (max-width:576px) {
+  .container .section-2 .image-2 img {
+    width: 95vw;
+    margin: 8% auto;
+  }
+}
+.container .section-2 .content {
+  padding: 2% 5%;
+}
+@media (max-width:576px) {
+  .container .section-2 .content {
+    padding: 0;
+    text-align: start;
+  }
+}
+.container .section-2 .content .button {
+  border: 1px solid black;
+  text-align: center;
+  padding: 2%;
+  width: 30%;
+}
+@media (max-width:576px) {
+  .container .section-2 .content .button {
+    padding: 2%;
+    width: 100%;
+    text-align: center;
+  }
+}
+.container h2 {
+  font-size: 1.8rem;
+  width: 100%;
+  padding: 5% 0% 3% 0;
+}
+@media (max-width:576px) {
+  .container h2 {
+    margin-top: 4%;
+    margin-left: 2%;
+  }
+}
+.container .property img {
+  width: 100%;
+  z-index: -1;
+}
+@media (max-width:576px) {
+  .container .property img {
+    margin: 0 auto;
+    width: 99vw;
+  }
+}
+.container .property .villas-button {
+  position: relative;
+  border: 1px solid white;
+  text-align: center;
+  background: lightgrey;
+  width: 32%;
+  padding: 2%;
+  font-size: 24px;
+  font-family: "Roboto", Arial;
+  float: right;
+  top: -40px;
+  letter-spacing: 5px;
+  z-index: 1;
+}
+@media (max-width:576px) {
+  .container .property .villas-button {
+    width: 80%;
+    float: none;
+    top: -10px;
+    margin-left: 8%;
+    font-size: 30px;
+    padding: 1%;
+  }
+}
+.container .property .description {
+  padding: 8% 25%;
+}
+@media (max-width:576px) {
+  .container .property .description {
+    width: 100%;
+    padding: 1%;
+  }
+}
+.container .property .description p {
+  padding: 1%;
+}
+.container .property .outskirts-button {
+  position: relative;
+  border: 1px solid white;
+  text-align: center;
+  background: lightgrey;
+  width: 30%;
+  padding: 2% 0%;
+  font-size: 24px;
+  font-family: "Roboto", Arial;
+  float: left;
+  top: -45px;
+  letter-spacing: 5px;
+}
+@media (max-width:576px) {
+  .container .property .outskirts-button {
+    width: 80%;
+    float: none;
+    top: -10px;
+    margin-left: 8%;
+    font-size: 30px;
+    padding: 1%;
+  }
+}
+/* Your Code Goes Here */
