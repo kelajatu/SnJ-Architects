@@ -39,3 +39,24 @@ class Tabs {
     return this.element.querySelector(`.tab-content[data-tab="${data}"]`);
   }
 }
+
+class TabsLink {
+  constructor(link, parent) {
+    this.link = link;
+    this.tabs = parent;
+    this.tabsItem = parent.getTab(this.link.dataset.tab);
+    this.tabsItem = new TabsItem(this.tabsItem);
+    this.link.addEventListener("click", () => {
+      this.tabs.updateActive(this);
+      this.select();
+    });
+  }
+  select() {
+    this.link.classList.add("tab-selected");
+    this.tabsItem.select();
+  }
+  deselect() {
+    this.link.classList.remove("tab-selected");
+    this.tabsItem.deselect();
+  }
+}
