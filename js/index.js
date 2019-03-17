@@ -60,3 +60,18 @@ class TabsLink {
     this.tabsItem.deselect();
   }
 }
+
+class TabsItem {
+  constructor(element) {
+    this.element = element;
+  }
+  select() {
+    this.element.classList.add("display-tab");
+  }
+  deselect() {
+    this.element.classList.remove("display-tab");
+  }
+}
+
+let tabs = document.querySelectorAll(".tabs");
+tabs = Array.from(tabs).map(tab => new Tabs(tab));
