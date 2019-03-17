@@ -1,17 +1,41 @@
 //  ========= Menu Nav =======
 
-const menuButton = document.querySelector('.open-hamburger'); 
-const menuOpenContent = document.querySelector('.menu-content'); 
-const closeMenuButton = document.querySelector('.closed-hamburger'); 
+const menuButton = document.querySelector(".open-hamburger");
+const menuOpenContent = document.querySelector(".menu-content");
+const closeMenuButton = document.querySelector(".closed-hamburger");
 
-menuButton.addEventListener('click', function() {
-    menuOpenContent.classList.remove('menu-hidden'); 
-    menuButton.style.display = 'none'; 
-    closeMenuButton.style.display = "flex"; 
-})
+menuButton.addEventListener("click", function() {
+  menuOpenContent.classList.remove("menu-hidden");
+  menuButton.style.display = "none";
+  closeMenuButton.style.display = "flex";
+});
 
-closeMenuButton.addEventListener('click', function() {
-    menuOpenContent.classList.add('menu-hidden'); 
-    menuButton.style.display = "flex"; 
-    closeMenuButton.style.display = "none";
-})
+closeMenuButton.addEventListener("click", function() {
+  menuOpenContent.classList.add("menu-hidden");
+  menuButton.style.display = "flex";
+  closeMenuButton.style.display = "none";
+});
+
+// ======= Tabs Navigation =======
+
+class Tabs {
+  constructor(element) {
+    this.element = element;
+    this.links = this.element.querySelectorAll(".service-tab");
+    this.links = Array.from(this.links).map(link => {
+      return new TabsLink(link, this);
+    });
+    this.activeLink = this.links[0];
+    this.init();
+  }
+  init() {
+    this.activeLink.select();
+  }
+  updateActive(newActive) {
+    this.activeLink.deselect();
+    this.activeLink = newActive;
+  }
+  getTab(data) {
+    return this.element.querySelector(`.tab-content[data-tab="${data}"]`);
+  }
+}
