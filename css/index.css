@@ -447,6 +447,154 @@ footer .copyright {
   position: fixed;
   width: 100%;
 }
+.page header nav .navigation {
+  display: flex;
+  justify-content: space-between;
+}
+.page header nav .navigation .logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 10%;
+}
+.page header nav .navigation .closed-hamburger {
+  display: none;
+  height: 25px;
+  margin-top: 5px;
+}
+.page header nav .navigation .open-hamburger {
+  height: 25px;
+  margin-top: 5px;
+}
+.page header nav .menu-content {
+  background-color: #9ea8b1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6%;
+}
+.page header nav .menu-content a {
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 85px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.page header nav .menu-content a:hover {
+  color: #222222;
+}
+.page header nav .menu-hidden {
+  display: none;
+}
+.services-page-jumbotron {
+  background-image: url("../img/services/services-jumbotron.png");
+  height: 40vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.services-page-jumbotron h1 {
+  font-size: 5.4rem;
+  line-height: 75px;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0 0 40px 6%;
+}
+.container main {
+  width: 100%;
+  margin: 0 auto;
+}
+.container main p {
+  font-size: 20px;
+  line-height: 28px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.container main .tabs-services {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+@media (max-width:576px) {
+  .container main .tabs-services {
+    flex-direction: column;
+    margin: 1% 0;
+  }
+}
+.container main .tabs-services .service-tab {
+  width: 20%;
+  padding: 2%;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+@media (max-width:576px) {
+  .container main .tabs-services .service-tab {
+    width: 100%;
+    margin: 2% 0;
+    background-size: contain;
+  }
+}
+.container main .tabs-services .service-tab:hover {
+  background-color: #5e9fb9;
+  color: #ffffff;
+}
+.container main .tabs-services .tab-selected {
+  background-color: #5e9fb9;
+  color: #ffffff;
+}
+.container main .tabs-content .tab-content {
+  display: flex;
+  display: none;
+}
+@media (max-width:576px) {
+  .container main .tabs-content .tab-content {
+    flex-direction: column;
+  }
+}
+.container main .tabs-content .tab-content .tab-content-text {
+  margin-right: 20px;
+}
+@media (max-width:576px) {
+  .container main .tabs-content .tab-content .tab-content-text {
+    margin-right: 0;
+  }
+}
+.container main .tabs-content .tab-content .tab-content-text h3 {
+  font-weight: bold;
+  font-size: 2.8rem;
+}
+@media (max-width:576px) {
+  .container main .tabs-content .tab-content .tab-content-text p {
+    margin: 5% 0;
+  }
+}
+.container main .tabs-content .tab-content .tab-content-img img {
+  margin-top: 24%;
+}
+@media (max-width:576px) {
+  .container main .tabs-content .tab-content .tab-content-img img {
+    margin: 0 auto;
+    width: 95vw;
+  }
+}
+.container main .tabs-content .display-tab {
+  display: flex;
+}
+.page {
+  font-family: "Roboto", Arial, Sans-serif;
+}
+.page header {
+  background-color: #9ea8b1;
+  padding: 12px 6%;
+  position: fixed;
+  width: 100%;
+}
 .page header nav .services-nav {
   display: flex;
   justify-content: space-between;
